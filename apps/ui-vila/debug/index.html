@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Debug</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/demo/index.html">Demo</a>
+      <a href="/equipe/index.html">Equipe</a>
+      <a href="/contato/index.html">Contato</a>
+      <a href="/debug/index.html">Debug</a>
+    </nav>
+    <main class="container">
+      <h1>Menu de Teste</h1>
+
+      <div class="field" id="target-section">
+        <label for="test-target">Escolha objeto de teste</label>
+        <select id="test-target" class="menu">
+          <option value="">-- selecione --</option>
+        </select>
+      </div>
+
+      <div class="field hidden" id="type-section">
+        <label for="tool-type">Escolha o tipo de ferramenta</label>
+        <select id="tool-type" class="menu">
+          <option value="">-- selecione --</option>
+        </select>
+      </div>
+
+      <div class="field hidden" id="tool-section">
+        <label for="tool-name">Escolha a ferramenta</label>
+        <select id="tool-name" class="menu">
+          <option value="">-- selecione --</option>
+        </select>
+      </div>
+
+      <section id="tool-info" class="hidden">
+        <p id="tool-description"></p>
+        <h3>Inputs esperados</h3>
+        <pre id="tool-input-desc"></pre>
+        <h3>Outputs esperados</h3>
+        <pre id="tool-output-desc"></pre>
+      </section>
+
+      <form id="tool-form" class="hidden"></form>
+
+      <button id="run-tool" class="btn hidden">Executar</button>
+
+      <h2>Output</h2>
+      <pre id="tool-output" class="hidden"></pre>
+    </main>
+
+    <script type="module" src="tools-config.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

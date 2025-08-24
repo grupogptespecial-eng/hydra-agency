@@ -1,0 +1,53 @@
+# HOW_TO_RUN
+
+## Prerequisites
+- Docker and Docker Compose
+- Python 3.11
+- Node.js 20
+
+## 1. Configure environment
+1. Clone the repository and enter it:
+   ```bash
+   git clone <REPO_URL>
+   cd hydra-agency
+   ```
+2. Copy the example environment file and fill in required API keys:
+   ```bash
+   cp configs/env/.env.example .env
+   # edit .env and set:
+   # ALPHAVANTAGE_KEY, FRED_API_KEY, WIKIRATE_TOKEN,
+   # OPEN_ROUTER_KEY, GOOGLE_IA_STUDIO_API, SEC_EDGAR_API
+   ```
+
+## 2. Start services
+Spin up database, storage, API, workers, and the UI:
+```bash
+make dev            # or run scripts/dev.sh
+```
+The stack brings up Postgres, Redis, MinIO, the FastAPI gateway, all workers, and the Vite dev server at <http://localhost:5173/>.
+
+## 3. Seed and demo
+Populate basic registry data and trigger a synthetic run:
+```bash
+python scripts/seed.py
+python scripts/run_demo.py
+```
+The demo emits events that animate the city UI and produces sample artifacts under `data/artifacts/`.
+
+## 4. Run tests
+From the repository root, execute:
+```bash
+pytest
+npm --prefix apps/ui-vila run build
+```
+These commands verify backend logic and confirm the UI builds successfully.
+
+## 5. Shut down
+Stop all containers when finished:
+```bash
+docker compose -f configs/docker/docker-compose.yml down
+```
+
+## Notes
+- All agents and tools must emit JSON; binary artifacts (PDFs, images) are stored under `data/artifacts/` and referenced via JSON metadata.
+- Never commit the `.env` file or API keys to version control.

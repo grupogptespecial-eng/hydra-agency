@@ -1,0 +1,1 @@
+# Adapter para BD

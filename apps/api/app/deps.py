@@ -1,0 +1,1 @@
+# Dependências comuns da API

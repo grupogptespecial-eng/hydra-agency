@@ -1,0 +1,43 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  padding: 0.4rem;
+  width: 100%;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#tool-form > div {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 0.5rem;
+  overflow-x: auto;
+}

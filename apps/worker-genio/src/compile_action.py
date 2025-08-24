@@ -1,0 +1,1 @@
+# Agrega pesquisa e forecasts
