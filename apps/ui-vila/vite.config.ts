@@ -7,10 +7,10 @@ export default defineConfig(({ command }) => ({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        demo: resolve(__dirname, 'demo/index.html'),
-        equipe: resolve(__dirname, 'equipe/index.html'),
-        contato: resolve(__dirname, 'contato/index.html'),
-        debug: resolve(__dirname, 'debug/index.html'),
+        demo: resolve(__dirname, 'public/demo/index.html'),
+        equipe: resolve(__dirname, 'public/equipe/index.html'),
+        contato: resolve(__dirname, 'public/contato/index.html'),
+        debug: resolve(__dirname, 'public/debug/index.html'),
       },
     },
   },
