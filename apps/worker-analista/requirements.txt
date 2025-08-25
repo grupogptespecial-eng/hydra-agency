@@ -1,0 +1,10 @@
+# Requirements for the analyst worker and forecasting tools
+pandas>=1.5
+numpy>=1.23
+scipy>=1.10
+scikit-learn>=1.2
+statsmodels>=0.13
+optuna>=3.0
+pmdarima>=2.0
+xgboost>=1.7
+lightgbm>=4.0
