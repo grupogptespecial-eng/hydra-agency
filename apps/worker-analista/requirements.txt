@@ -8,3 +8,5 @@ optuna>=3.0
 pmdarima>=2.0
 xgboost>=1.7
 lightgbm>=4.0
+requests>=2.31
+httpx>=0.24
